@@ -1,3 +1,8 @@
+import { SchedulePageModule } from './../pages/schedule/schedule.module';
+import { SpeakerDetailsPageModule } from './../pages/speaker-details/speaker-details.module';
+import { SidemenuPageModule } from './../pages/sidemenu/sidemenu.module';
+import { RegisterPageModule } from './../pages/register/register.module';
+import { LoginPageModule } from './../pages/login/login.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -14,7 +19,12 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    LoginPageModule,
+    RegisterPageModule,
+    SidemenuPageModule,
+    SpeakerDetailsPageModule,
+    SchedulePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
